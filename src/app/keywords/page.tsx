@@ -14,6 +14,7 @@ interface Keyword {
   id: string
   location_id: string
   keyword: string
+  website_url: string
   created_at: string
   location?: Location
 }
@@ -36,6 +37,7 @@ export default function KeywordsPage() {
   const [showForm, setShowForm] = useState(false)
   const [selectedLocation, setSelectedLocation] = useState('')
   const [newKeyword, setNewKeyword] = useState('')
+  const [newWebsite, setNewWebsite] = useState('')
   const [saving, setSaving] = useState(false)
   const [tracking, setTracking] = useState<string | null>(null)
   const [error, setError] = useState('')
@@ -112,16 +114,24 @@ export default function KeywordsPage() {
     setError('')
 
     try {
+      const insertData: any = { 
+        location_id: selectedLocation, 
+        keyword: newKeyword.trim() 
+      }
+      
+      // Add website_url if provided (will be ignored if column doesn't exist)
+      if (newWebsite.trim()) {
+        insertData.website_url = newWebsite.trim()
+      }
+
       const { error } = await supabase
         .from('keywords')
-        .insert({ 
-          location_id: selectedLocation, 
-          keyword: newKeyword.trim() 
-        })
+        .insert(insertData)
 
       if (error) throw error
 
       setNewKeyword('')
+      setNewWebsite('')
       setSelectedLocation('')
       setShowForm(false)
       fetchData()
@@ -214,7 +224,7 @@ export default function KeywordsPage() {
             <p className="text-gray-600 mt-1">Track your keywords and monitor rankings</p>
           </div>
           <button
-            onClick={() => setShowForm(true)}
+            onClick={() => { setShowForm(true); setNewKeyword(''); setNewWebsite(''); setSelectedLocation(locations[0]?.id || ''); }}
             disabled={locations.length === 0}
             className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
@@ -271,8 +281,21 @@ export default function KeywordsPage() {
                       value={newKeyword}
                       onChange={(e) => setNewKeyword(e.target.value)}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="e.g., pizza near me, best pizza in NYC"
+                      placeholder="e.g., mold remediation boca raton"
                     />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Your Website URL
+                    </label>
+                    <input
+                      type="url"
+                      value={newWebsite}
+                      onChange={(e) => setNewWebsite(e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="e.g., https://bocaratonmold.com"
+                    />
+                    <p className="text-xs text-gray-500 mt-1">We'll highlight your site's ranking</p>
                   </div>
                   <div className="flex gap-3 pt-4">
                     <button

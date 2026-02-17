@@ -29,8 +29,10 @@ export async function GET(request: NextRequest) {
     });
 
     if (location) {
+      // Format: "City, State, Country" for SerpApi
       params.append('location', location);
       params.append('hl', 'en');
+      params.append('gl', 'us');
     }
 
     const response = await fetch(`https://serpapi.com/search?${params}`, {
