@@ -29,8 +29,25 @@ export async function GET(request: NextRequest) {
     });
 
     if (location) {
-      // Format: "City, State, Country" for SerpApi
-      params.append('location', location);
+      // Convert state abbreviations to full names for SerpApi
+      const stateMap: Record<string, string> = {
+        'FL': 'Florida', 'CA': 'California', 'NY': 'New York', 'TX': 'Texas',
+        'AZ': 'Arizona', 'NV': 'Nevada', 'IL': 'Illinois', 'PA': 'Pennsylvania',
+        'OH': 'Ohio', 'GA': 'Georgia', 'NC': 'North Carolina', 'MI': 'Michigan'
+      }
+      
+      let formattedLocation = location
+      // Replace state abbreviations with full names
+      for (const [abbr, full] of Object.entries(stateMap)) {
+        formattedLocation = formattedLocation.replace(new RegExp(`\\b${abbr}\\b`, 'gi'), full)
+      }
+      
+      // Add country if not present
+      if (!formattedLocation.toLowerCase().includes('united states')) {
+        formattedLocation += ', United States'
+      }
+      
+      params.append('location', formattedLocation);
       params.append('hl', 'en');
       params.append('gl', 'us');
     }
