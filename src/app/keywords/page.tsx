@@ -89,7 +89,7 @@ export default function KeywordsPage() {
 
   async function fetchRankings(keywordsList: Keyword[]) {
     const rankingsMap: Record<string, Ranking[]> = {}
-    
+
     for (const kw of keywordsList) {
       const { data, error } = await supabase
         .from('rankings')
@@ -102,7 +102,7 @@ export default function KeywordsPage() {
         rankingsMap[kw.id] = data
       }
     }
-    
+
     setRankings(rankingsMap)
   }
 
@@ -114,14 +114,13 @@ export default function KeywordsPage() {
     setError('')
 
     try {
-      const insertData: any = { 
-        location_id: selectedLocation, 
-        keyword: newKeyword.trim() 
-      }
-      
       const { error } = await supabase
         .from('keywords')
-        .insert(insertData)
+        .insert({ 
+          location_id: selectedLocation, 
+          keyword: newKeyword.trim(),
+          website_url: newWebsite.trim() || null
+        })
 
       if (error) throw error
 
@@ -424,9 +423,9 @@ export default function KeywordsPage() {
                             <tr key={ranking.id} className="hover:bg-gray-50">
                               <td className="py-2 pr-4">
                                 <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-medium ${
-                                  ranking.position <= 3 
-                                    ? 'bg-green-100 text-green-700' 
-                                    : ranking.position <= 10 
+                                  ranking.position <= 3
+                                    ? 'bg-green-100 text-green-700'
+                                    : ranking.position <= 10
                                       ? 'bg-yellow-100 text-yellow-700'
                                       : 'bg-gray-100 text-gray-600'
                                 }`}>
