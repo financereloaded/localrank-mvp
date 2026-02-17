@@ -119,11 +119,6 @@ export default function KeywordsPage() {
         keyword: newKeyword.trim() 
       }
       
-      // Add website_url if provided (will be ignored if column doesn't exist)
-      if (newWebsite.trim()) {
-        insertData.website_url = newWebsite.trim()
-      }
-
       const { error } = await supabase
         .from('keywords')
         .insert(insertData)
