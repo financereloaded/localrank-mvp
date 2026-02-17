@@ -402,6 +402,37 @@ export default function KeywordsPage() {
                   </div>
                 </div>
 
+                {/* Your Site Ranking - Prominent Display */}
+                {keyword.website_url && rankings[keyword.id] && (() => {
+                  const userUrl = keyword.website_url.toLowerCase().replace(/^https?:\/\//, '').replace(/\/$/, '')
+                  const userRanking = rankings[keyword.id]?.find(r => 
+                    r.url.toLowerCase().includes(userUrl)
+                  )
+                  return userRanking ? (
+                    <div className="bg-green-50 border-l-4 border-green-500 p-4">
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0">
+                          <span className="text-2xl font-bold text-green-600">#{userRanking.position}</span>
+                        </div>
+                        <div className="ml-3">
+                          <p className="text-sm font-medium text-green-800">
+                            Your site ranks #{userRanking.position} for "{keyword.keyword}"
+                          </p>
+                          <p className="text-xs text-green-600 mt-1">
+                            {userRanking.serp_type} • Page {userRanking.page}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+                      <p className="text-sm text-yellow-800">
+                        Your site not found in top {rankings[keyword.id]?.length || 20} results for "{keyword.keyword}"
+                      </p>
+                    </div>
+                  )
+                })()}
+
                 {/* Rankings Table */}
                 <div className="p-6">
                   <h4 className="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wide">
@@ -419,8 +450,10 @@ export default function KeywordsPage() {
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-100">
-                          {rankings[keyword.id].slice(0, 10).map((ranking, idx) => (
-                            <tr key={ranking.id} className="hover:bg-gray-50">
+                          {rankings[keyword.id].slice(0, 10).map((ranking, idx) => {
+                            const isUserSite = keyword.website_url && ranking.url.toLowerCase().includes(keyword.website_url.toLowerCase().replace(/^https?:\/\//, '').replace(/\/$/, ''))
+                            return (
+                            <tr key={ranking.id} className={isUserSite ? 'bg-green-50 hover:bg-green-100' : 'hover:bg-gray-50'}>
                               <td className="py-2 pr-4">
                                 <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-medium ${
                                   ranking.position <= 3
@@ -456,7 +489,7 @@ export default function KeywordsPage() {
                                 {ranking.page}
                               </td>
                             </tr>
-                          ))}
+                          )})}
                         </tbody>
                       </table>
                     </div>
