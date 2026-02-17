@@ -1,0 +1,404 @@
+{
+  "directories": [
+    {
+      "id": 1,
+      "name": "Yelp",
+      "url": "https://www.yelp.com",
+      "category": "General",
+      "domain_authority": 93,
+      "description": "Popular review site for local businesses"
+    },
+    {
+      "id": 2,
+      "name": "Yellow Pages",
+      "url": "https://www.yellowpages.com",
+      "category": "General",
+      "domain_authority": 88,
+      "description": "Classic business directory"
+    },
+    {
+      "id": 3,
+      "name": "BBB (Better Business Bureau)",
+      "url": "https://www.bbb.org",
+      "category": "Accreditation",
+      "domain_authority": 91,
+      "description": "Business accreditation and reviews"
+    },
+    {
+      "id": 4,
+      "name": "Angi",
+      "url": "https://www.angi.com",
+      "category": "Home Services",
+      "domain_authority": 78,
+      "description": "Home services marketplace"
+    },
+    {
+      "id": 5,
+      "name": "HomeAdvisor",
+      "url": "https://www.homeadvisor.com",
+      "category": "Home Services",
+      "domain_authority": 76,
+      "description": "Home improvement contractors"
+    },
+    {
+      "id": 6,
+      "name": "Houzz",
+      "url": "https://www.houzz.com",
+      "category": "Home Services",
+      "domain_authority": 85,
+      "description": "Home remodeling and design"
+    },
+    {
+      "id": 7,
+      "name": "Thumbtack",
+      "url": "https://www.thumbtack.com",
+      "category": "General",
+      "domain_authority": 77,
+      "description": "Local service professionals"
+    },
+    {
+      "id": 8,
+      "name": "MerchantCircle",
+      "url": "https://www.merchantcircle.com",
+      "category": "General",
+      "domain_authority": 72,
+      "description": "Local business network"
+    },
+    {
+      "id": 9,
+      "name": "Local.com",
+      "url": "https://www.local.com",
+      "category": "General",
+      "domain_authority": 68,
+      "description": "Local business search"
+    },
+    {
+      "id": 10,
+      "name": "Citysearch",
+      "url": "https://www.citysearch.com",
+      "category": "General",
+      "domain_authority": 71,
+      "description": "City-focused business directory"
+    },
+    {
+      "id": 11,
+      "name": "EZLocal",
+      "url": "https://www.ezlocal.com",
+      "category": "General",
+      "domain_authority": 64,
+      "description": "Local business listings"
+    },
+    {
+      "id": 12,
+      "name": "Judy's Book",
+      "url": "https://www.judysbook.com",
+      "category": "General",
+      "domain_authority": 62,
+      "description": "Social local business reviews"
+    },
+    {
+      "id": 13,
+      "name": "BrownBook",
+      "url": "https://www.brownbook.net",
+      "category": "General",
+      "domain_authority": 59,
+      "description": "Global business directory"
+    },
+    {
+      "id": 14,
+      "name": "Manta",
+      "url": "https://www.manta.com",
+      "category": "General",
+      "domain_authority": 74,
+      "description": "Small business directory"
+    },
+    {
+      "id": 15,
+      "name": "DexKnows",
+      "url": "https://www.dexknows.com",
+      "category": "General",
+      "domain_authority": 67,
+      "description": "Local business listings"
+    },
+    {
+      "id": 16,
+      "name": "Infobel",
+      "url": "https://www.infobel.com",
+      "category": "General",
+      "domain_authority": 73,
+      "description": "International business directory"
+    },
+    {
+      "id": 17,
+      "name": "Tupalo",
+      "url": "https://www.tupalo.com",
+      "category": "General",
+      "domain_authority": 58,
+      "description": "Crowdsourced business directory"
+    },
+    {
+      "id": 18,
+      "name": "LocalLinks",
+      "url": "https://www.locallinks.com",
+      "category": "General",
+      "domain_authority": 52,
+      "description": "Local business citations"
+    },
+    {
+      "id": 19,
+      "name": "ShowMeLocal",
+      "url": "https://www.showmelocal.com",
+      "category": "General",
+      "domain_authority": 55,
+      "description": "Local business directory"
+    },
+    {
+      "id": 20,
+      "name": "USCityFork",
+      "url": "https://www.uscityfork.com",
+      "category": "General",
+      "domain_authority": 48,
+      "description": "US city business guide"
+    },
+    {
+      "id": 21,
+      "name": "Google Business Profile",
+      "url": "https://business.google.com",
+      "category": "Map/Search",
+      "domain_authority": 100,
+      "description": "Google's business listing service"
+    },
+    {
+      "id": 22,
+      "name": "Apple Maps",
+      "url": "https://maps.apple.com",
+      "category": "Map/Search",
+      "domain_authority": 100,
+      "description": "Apple's map and business listings"
+    },
+    {
+      "id": 23,
+      "name": "Bing Places",
+      "url": "https://www.bing.com/places",
+      "category": "Map/Search",
+      "domain_authority": 94,
+      "description": "Microsoft's business directory"
+    },
+    {
+      "id": 24,
+      "name": "Facebook Business",
+      "url": "https://www.facebook.com/business",
+      "category": "Social",
+      "domain_authority": 96,
+      "description": "Facebook business page and listings"
+    },
+    {
+      "id": 25,
+      "name": "LinkedIn Company",
+      "url": "https://www.linkedin.com/company",
+      "category": "Social",
+      "domain_authority": 99,
+      "description": "Business professional network"
+    },
+    {
+      "id": 26,
+      "name": "Twitter/X Business",
+      "url": "https://business.twitter.com",
+      "category": "Social",
+      "domain_authority": 95,
+      "description": "Business presence on X"
+    },
+    {
+      "id": 27,
+      "name": "Instagram Business",
+      "url": "https://business.instagram.com",
+      "category": "Social",
+      "domain_authority": 93,
+      "description": "Business profile on Instagram"
+    },
+    {
+      "id": 28,
+      "name": "TripAdvisor",
+      "url": "https://www.tripadvisor.com",
+      "category": "Travel",
+      "domain_authority": 92,
+      "description": "Travel and hospitality reviews"
+    },
+    {
+      "id": 29,
+      "name": "Zomato",
+      "url": "https://www.zomato.com",
+      "category": "Food",
+      "domain_authority": 82,
+      "description": "Restaurant reviews and listings"
+    },
+    {
+      "id": 30,
+      "name": "OpenTable",
+      "url": "https://www.opentable.com",
+      "category": "Food",
+      "domain_authority": 84,
+      "description": "Restaurant reservations"
+    },
+    {
+      "id": 31,
+      "name": "Healthgrades",
+      "url": "https://www.healthgrades.com",
+      "category": "Healthcare",
+      "domain_authority": 81,
+      "description": "Doctor and hospital reviews"
+    },
+    {
+      "id": 32,
+      "name": "Vitals",
+      "url": "https://www.vitals.com",
+      "category": "Healthcare",
+      "domain_authority": 72,
+      "description": "Healthcare provider directory"
+    },
+    {
+      "id": 33,
+      "name": "Zocdoc",
+      "url": "https://www.zocdoc.com",
+      "category": "Healthcare",
+      "domain_authority": 76,
+      "description": "Doctor appointment booking"
+    },
+    {
+      "id": 34,
+      "name": "Avvo",
+      "url": "https://www.avvo.com",
+      "category": "Legal",
+      "domain_authority": 75,
+      "description": "Legal services directory"
+    },
+    {
+      "id": 35,
+      "name": "Martindale",
+      "url": "https://www.martindale.com",
+      "category": "Legal",
+      "domain_authority": 70,
+      "description": "Legal professional directory"
+    },
+    {
+      "id": 36,
+      "name": "Cars.com",
+      "url": "https://www.cars.com",
+      "category": "Automotive",
+      "domain_authority": 83,
+      "description": "Car dealer and review site"
+    },
+    {
+      "id": 37,
+      "name": "AutoTrader",
+      "url": "https://www.autotrader.com",
+      "category": "Automotive",
+      "domain_authority": 85,
+      "description": "Vehicle marketplace"
+    },
+    {
+      "id": 38,
+      "name": "Yelp for Doctors",
+      "url": "https://www.yelp.com/health",
+      "category": "Healthcare",
+      "domain_authority": 93,
+      "description": "Medical provider reviews"
+    },
+    {
+      "id": 39,
+      "name": "Porch",
+      "url": "https://www.porch.com",
+      "category": "Home Services",
+      "domain_authority": 66,
+      "description": "Home improvement network"
+    },
+    {
+      "id": 40,
+      "name": "Pro Referral",
+      "url": "https://www.proreferral.com",
+      "category": "Home Services",
+      "domain_authority": 58,
+      "description": "Pro contractor referrals"
+    },
+    {
+      "id": 41,
+      "name": "Houzz Pro",
+      "url": "https://www.houzz.com/pro",
+      "category": "Home Services",
+      "domain_authority": 85,
+      "description": "Professional contractor listings"
+    },
+    {
+      "id": 42,
+      "name": "Thumbtack Pro",
+      "url": "https://www.thumbtack.com/pro",
+      "category": "General",
+      "domain_authority": 77,
+      "description": "Professional service providers"
+    },
+    {
+      "id": 43,
+      "name": "Care.com",
+      "url": "https://www.care.com",
+      "category": "Services",
+      "domain_authority": 74,
+      "description": "Care services marketplace"
+    },
+    {
+      "id": 44,
+      "name": "TaskRabbit",
+      "url": "https://www.taskrabbit.com",
+      "category": "Services",
+      "domain_authority": 71,
+      "description": "Task and errand services"
+    },
+    {
+      "id": 45,
+      "name": "WeddingWire",
+      "url": "https://www.weddingwire.com",
+      "category": "Events",
+      "domain_authority": 79,
+      "description": "Wedding vendor directory"
+    },
+    {
+      "id": 46,
+      "name": "The Knot",
+      "url": "https://www.theknot.com",
+      "category": "Events",
+      "domain_authority": 82,
+      "description": "Wedding planning marketplace"
+    },
+    {
+      "id": 47,
+      "name": "G2",
+      "url": "https://www.g2.com",
+      "category": "Tech",
+      "domain_authority": 78,
+      "description": "Software reviews"
+    },
+    {
+      "id": 48,
+      "name": "Capterra",
+      "url": "https://www.capterra.com",
+      "category": "Tech",
+      "domain_authority": 76,
+      "description": "Business software reviews"
+    },
+    {
+      "id": 49,
+      "name": "Alignable",
+      "url": "https://www.alignable.com",
+      "category": "Business Network",
+      "domain_authority": 69,
+      "description": "Small business networking"
+    },
+    {
+      "id": 50,
+      "name": "FourSquare",
+      "url": "https://foursquare.com",
+      "category": "Map/Search",
+      "domain_authority": 86,
+      "description": "Location check-ins and reviews"
+    }
+  ]
+}
