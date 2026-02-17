@@ -45,10 +45,10 @@ export default function Home() {
             </div>
           </a>
 
-          {/* Rankings Card (Coming Soon) */}
-          <div className="bg-white p-6 rounded-xl shadow-sm opacity-75">
+          {/* Rankings Card */}
+          <a href="/keywords" className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors">
                 <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
@@ -58,12 +58,12 @@ export default function Home() {
                 <p className="text-gray-500 text-sm">View your search rankings</p>
               </div>
             </div>
-          </div>
+          </a>
 
-          {/* Citations Card (Coming Soon) */}
-          <div className="bg-white p-6 rounded-xl shadow-sm opacity-75">
+          {/* Citations Card */}
+          <a href="/citations" className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center group-hover:bg-orange-200 transition-colors">
                 <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
@@ -73,7 +73,7 @@ export default function Home() {
                 <p className="text-gray-500 text-sm">Manage your business citations</p>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <div className="mt-8 p-4 bg-gray-100 rounded-lg">

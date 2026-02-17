@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
       api_key: serpApiKey,
       q: keyword,
       engine: 'google',
-      num: '20',
+      num: '100',  // Get 100 results to find deeper rankings
     });
 
     if (location) {
