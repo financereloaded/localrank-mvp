@@ -7,7 +7,7 @@ export default function Home() {
         <h1 className="text-3xl font-bold mb-2">LocalRank MVP</h1>
         <p className="text-gray-600 mb-8">Track your local SEO rankings</p>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {/* Locations Card */}
           <a
             href="/locations"
@@ -41,21 +41,6 @@ export default function Home() {
               <div>
                 <h2 className="text-lg font-semibold text-gray-900">Keywords</h2>
                 <p className="text-gray-500 text-sm">Track your target keywords</p>
-              </div>
-            </div>
-          </a>
-
-          {/* Rankings Card */}
-          <a href="/keywords" className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </div>
-              <div>
-                <h2 className="text-lg font-semibold text-gray-900">Rankings</h2>
-                <p className="text-gray-500 text-sm">View your search rankings</p>
               </div>
             </div>
           </a>
