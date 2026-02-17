@@ -427,7 +427,7 @@ export default function KeywordsPage() {
                   ) : (
                     <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4">
                       <p className="text-sm text-yellow-800">
-                        Your site not found in top {rankings[keyword.id]?.length || 20} results for "{keyword.keyword}"
+                        Not in top {rankings[keyword.id]?.length || 12} results. Consider running a deeper scan (costs more API credits).
                       </p>
                     </div>
                   )
